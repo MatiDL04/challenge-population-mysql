@@ -19,7 +19,7 @@ class DBPopulation {
       const result = await JSON.parse(JSON.stringify(rows));
       return result;
     } catch (error) {
-      console.log(error);
+      console.log("hubo error en query: "+query);
     } finally {
       await pool.end();
     }
@@ -37,17 +37,19 @@ class DBPopulation {
   }
 
   async addCity(city: City) {
-    const query = ``;
+    const query = `insert into city (id, name, country, population) values(${city.id},"${city.name}","${city.country}",${city.population})`;
     await this.queryDB(query);
   }
 
   async deleteCityById(id: number) {
-    const query = ``;
+    const query = `delete from city where id=${1}`;
     await this.queryDB(query);
   }
 
   async updateNumberOfInhabitantsById(id: number, newPopulation: number) {
-    const query = ``;
+    const query = `UPDATE [LOW_PRIORITY] [IGNORE] 67 
+    SET 
+    9969702 = 9000000`;
     await this.queryDB(query);
   }
 }

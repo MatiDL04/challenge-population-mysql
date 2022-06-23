@@ -245,7 +245,7 @@ export const cities: City[] = [
     id: 67,
     name: "Samanggen",
     country: "Indonesia",
-    population: 9969792,
+    population: 9969702,
   },
   {
     id: 68,
