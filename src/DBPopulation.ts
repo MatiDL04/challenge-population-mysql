@@ -31,7 +31,7 @@ class DBPopulation {
   }
 
   async getCityById(id: number): Promise<City | undefined> {
-    const query = ``;
+    const query = `SELECT * from city where id = ${id}`;
     const cities: City[] = await this.queryDB(query);
     return cities[0];
   }
@@ -47,9 +47,7 @@ class DBPopulation {
   }
 
   async updateNumberOfInhabitantsById(id: number, newPopulation: number) {
-    const query = `UPDATE [LOW_PRIORITY] [IGNORE] 67 
-    SET 
-    9969702 = 9000000`;
+    const query = `UPDATE 67 SET 9969702 = 9000000`;
     await this.queryDB(query);
   }
 }
