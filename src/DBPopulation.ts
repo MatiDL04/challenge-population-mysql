@@ -47,7 +47,7 @@ class DBPopulation {
   }
 
   async updateNumberOfInhabitantsById(id: number, newPopulation: number) {
-    const query = `UPDATE 67 SET 9969702 = 9000000`;
+    const query = `UPDATE city SET population = ${newPopulation} WHERE id = ${id}`;
     await this.queryDB(query);
   }
 }
